@@ -13,8 +13,9 @@ gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
 gem 'font-awesome-sass', '~> 5.5.0'
 gem 'sassc-rails'
- Pgem 'uglifier'
+gem 'uglifier'
 gem 'webpacker'
+gem 'simple_form'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
