@@ -11,7 +11,7 @@ class CreateCharities < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :geographical_reach
       t.string :category
-      t.string :status
+      t.string :status, :default => "requested"
       t.references :user, foreign_key: true
       t.integer :internal_rating
 
