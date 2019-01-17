@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_01_16_173607) do
     t.string "email"
     t.string "geographical_reach"
     t.string "category"
-    t.string "status"
+    t.string "status", default: "requested"
     t.bigint "user_id"
     t.integer "internal_rating"
     t.datetime "created_at", null: false
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2019_01_16_173607) do
   create_table "follows", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "charity_id"
-    t.boolean "status"
+    t.boolean "status", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["charity_id"], name: "index_follows_on_charity_id"
