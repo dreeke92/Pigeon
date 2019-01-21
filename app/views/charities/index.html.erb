@@ -1,0 +1,8 @@
+<p>This page serves as an index for all charities</p>
+
+<ul>
+  <% @charities.each do |charity| %>
+    <li>Charity name: <%= charity.name %></li>
+  <% end %>
+</ul>
+

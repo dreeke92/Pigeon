@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_16_173607) do
+ActiveRecord::Schema.define(version: 2019_01_21_111438) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_01_16_173607) do
   create_table "charities", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "profile_picture"
+    t.string "photo"
     t.string "website_url"
     t.integer "longitude"
     t.integer "latitude"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2019_01_16_173607) do
   create_table "follows", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "charity_id"
-    t.boolean "status"
+    t.boolean "status", default: true
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["charity_id"], name: "index_follows_on_charity_id"
@@ -108,6 +108,8 @@ ActiveRecord::Schema.define(version: 2019_01_16_173607) do
     t.integer "latitude"
     t.string "phone_number"
     t.integer "total_credit"
+    t.string "photo"
+    t.boolean "admin"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

@@ -3,7 +3,7 @@ class CreateCharities < ActiveRecord::Migration[5.2]
     create_table :charities do |t|
       t.string :name
       t.text :description
-      t.string :profile_picture
+      t.string :photo
       t.string :website_url
       t.integer :longitude
       t.integer :latitude
@@ -11,7 +11,7 @@ class CreateCharities < ActiveRecord::Migration[5.2]
       t.string :email
       t.string :geographical_reach
       t.string :category
-      t.string :status, :default => "requested"
+      t.string :status
       t.references :user, foreign_key: true
       t.integer :internal_rating
 
