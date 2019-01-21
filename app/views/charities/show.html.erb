@@ -1,0 +1,17 @@
+<p>This page serves as show for charities</p>
+
+<ul>
+<li><%= @charity.name %></li>
+<li><%= @charity.description %></li>
+<li><%= @charity.website_url %></li>
+<li><%= @charity.email %></li>
+<li><%= @charity.category %></li>
+<li><%= @charity.status %></li>
+</ul>
+
+<% if @charity.user = current_user %>
+  <p>Create a new post</p>
+  <div>
+
+  </div>
+<% end %>

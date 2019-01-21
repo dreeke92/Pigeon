@@ -1,0 +1,15 @@
+<p>This page serves as creation of new charities</p>
+<!-- app/views/restaurants/_form.html.erb -->
+<div>
+  <%= simple_form_for(@charity) do |f| %>
+
+    <%= f.input :name, label: 'Name of the charity', error: 'Name is mandatory, please specify one' %>
+    <%= f.input :description, label: 'Description of the charity' %>
+    <%= f.input :website_url, label: 'Website URL' %>
+    <%= f.input :email, label: 'Contact email' %>
+    <%= f.input :category, label: 'Type of charity', collection: ["Option 1", "Option 2", "Option 3"] %>
+    <%= f.button :submit %>
+
+    <!-- [...] all the fields -->
+  <% end %>
+</div>
