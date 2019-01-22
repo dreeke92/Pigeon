@@ -10,12 +10,6 @@
   <li><%= @charity.status %></li>
   </ul>
 
-  <%= cl_image_tag("",
-      width: 400, height: 300, crop: :fill) %>
-
-<!-- for face detection -->
-<%= cl_image_tag("",
-      width: 150, height: 150, crop: :thumb, gravity: :face) %>
 
   <% if @charity.user = current_user %>
     <p class="btn-pigeon">Create a new post</p>
