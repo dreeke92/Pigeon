@@ -1,0 +1,26 @@
+<div class="container">
+  <p>This page serves as show for charities</p>
+
+  <ul>
+  <li><%= @charity.name %></li>
+  <li><%= @charity.description %></li>
+  <li><%= @charity.website_url %></li>
+  <li><%= @charity.email %></li>
+  <li><%= @charity.category %></li>
+  <li><%= @charity.status %></li>
+  </ul>
+
+  <%= cl_image_tag("",
+      width: 400, height: 300, crop: :fill) %>
+
+<!-- for face detection -->
+<%= cl_image_tag("",
+      width: 150, height: 150, crop: :thumb, gravity: :face) %>
+
+  <% if @charity.user = current_user %>
+    <p class="btn-pigeon">Create a new post</p>
+    <div>
+
+    </div>
+  <% end %>
+</div>
