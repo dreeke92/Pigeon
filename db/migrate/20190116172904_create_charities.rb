@@ -3,7 +3,6 @@ class CreateCharities < ActiveRecord::Migration[5.2]
     create_table :charities do |t|
       t.string :name
       t.text :description
-      t.string :photo
       t.string :website_url
       t.integer :longitude
       t.integer :latitude

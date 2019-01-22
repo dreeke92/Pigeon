@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_21_111438) do
+ActiveRecord::Schema.define(version: 2019_01_22_054926) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(version: 2019_01_21_111438) do
   create_table "charities", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.string "photo"
     t.string "website_url"
     t.integer "longitude"
     t.integer "latitude"
@@ -26,11 +25,12 @@ ActiveRecord::Schema.define(version: 2019_01_21_111438) do
     t.string "email"
     t.string "geographical_reach"
     t.string "category"
-    t.string "status", default: "requested"
+    t.string "status"
     t.bigint "user_id"
     t.integer "internal_rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["user_id"], name: "index_charities_on_user_id"
   end
 
@@ -76,10 +76,10 @@ ActiveRecord::Schema.define(version: 2019_01_21_111438) do
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
-    t.string "photo"
     t.bigint "charity_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "photo"
     t.index ["charity_id"], name: "index_posts_on_charity_id"
   end
 
@@ -108,8 +108,8 @@ ActiveRecord::Schema.define(version: 2019_01_21_111438) do
     t.integer "latitude"
     t.string "phone_number"
     t.integer "total_credit"
-    t.string "photo"
     t.boolean "admin"
+    t.string "photo"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

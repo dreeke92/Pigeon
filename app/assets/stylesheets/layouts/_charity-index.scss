@@ -1,0 +1,55 @@
+.charity-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid rgba(220,224,244,0.4);
+}
+.charity-container:last-child {
+  border-bottom: none;
+}
+// .charity-body {
+//   flex-grow: 1;
+// }
+.charity-name {
+  padding-left: 0px;
+  min-width: 80px;
+}
+.charity-name h3 {
+  font-size: 13px;
+  margin-bottom: 0px;
+}
+.charity-name p {
+  font-size: 13px;
+  font-weight: lighter;
+  opacity: 0.6;
+  margin-top: 5px;
+}
+.charity-body {
+  padding-left: 5px;
+  font-size: 13px;
+  color: rgba(0,0,0,0.7);
+}
+.charity-body {
+  padding-left: 5px;
+  color: rgba(0,0,0,0.4);
+}
+.charity-body strong{
+  color: rgba(0,0,0,0.9);
+  color: rgba(0,0,0,0.9);
+}
+.charity-body p {
+  margin: 6px 0;
+}
+.charity-status {
+  font-size: 14px;
+}
+.status.accepted {
+  color: #04A366;
+}
+.status.declined {
+  color: red;
+}
+.status.pending {
+  color: lightgrey;
+}
