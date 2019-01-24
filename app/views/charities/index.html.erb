@@ -1,8 +1,16 @@
-<p>This page serves as an index for all charities</p>
-
-<ul>
+<div class="container">
   <% @charities.each do |charity| %>
-    <li>Charity name: <%= charity.name %></li>
+    <div class="charity-container">
+      <div>
+        <%= cl_image_tag charity.photo, :class => "avatar-large" , crop: :fill %>
+        <div class="charity-name">
+          <h3><%= charity.name %></h3>
+        </div>
+      </div>
+      <div class="charity-body">
+        <p><strong><%= charity.category %></strong></p>
+        <p><%= charity.geographical_reach %></p>
+      </div>
+    </div>
   <% end %>
-</ul>
-
+</div>

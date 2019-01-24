@@ -1,20 +1,15 @@
 <div class="container">
-  <p>This page serves as show for charities</p>
-
-  <ul>
-  <li><%= @charity.name %></li>
-  <li><%= @charity.description %></li>
-  <li><%= @charity.website_url %></li>
-  <li><%= @charity.email %></li>
-  <li><%= @charity.category %></li>
-  <li><%= @charity.status %></li>
-  </ul>
-
-
-  <% if @charity.user = current_user %>
-    <p class="btn-pigeon">Create a new post</p>
-    <div>
-
+  <div>
+    <div class="charity-banner">
+      <img src="https://www.bevanbuckland.co.uk/sites/www.bevanbuckland.co.uk/files/images/charity_banner2.jpg">
     </div>
-  <% end %>
+    <div class="charity-profile-wrapper">
+      <div class="charity-profile-picture">
+        <%= cl_image_tag @charity.photo, :class => "charity-avatar" , crop: :fill %>
+      </div>
+      <div class="charity-profile-name">
+        <h2><%= @charity.name %></h2>
+      </div>
+    </div>
+  </div>
 </div>

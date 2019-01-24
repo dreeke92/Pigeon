@@ -7,6 +7,5 @@ class AddFieldsToUsers < ActiveRecord::Migration[5.2]
     add_column :users, :latitude, :integer
     add_column :users, :phone_number, :varchar
     add_column :users, :total_credit, :integer
-    add_column :users, :photo, :string
   end
 end

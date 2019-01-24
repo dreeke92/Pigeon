@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :ratings
   has_many :likes
   has_many :comments
+  mount_uploader :photo, PhotoUploader
 end
