@@ -1,11 +1,6 @@
 
 <div class="container">
-  <h3>NGOs & charities overview</h3>
-  <p>Search charity:</p>
   <div class="search-input">This is gonna be a search div</div>
-  <br>
-  <p>Filter on:</p>
-
   <div class="card-container">
     <div class="row">
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
@@ -20,13 +15,35 @@
     </div>
   </div>
 
+  <h3>NGOs & charities overview</h3>
+
   <div class="card-container">
     <div class="row">
       <% @charities.each do |charity| %>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
           <div class="card">
-            <%= cl_image_path charity.photo, height: 300, width: 400, crop: :fill %>
-
+            <div class="charity-card-header">
+              <div class="charity-card-profile">
+                <%= cl_image_tag charity.photo, crop: :fill, class: "charity-avatar-small" %>
+                <div class="charity-card-title">
+                  <h5 class="charity-card-name"><%= charity.name %></h5>
+                  <p class="charity-card-category"><%= charity.category %></p>
+                </div>
+              </div>
+              <div>
+                <div class="charity-card-followers">
+                  <i class="fas fa-dove"></i>
+                  <p class="charity-card-followers-display">1,500</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="charity-card-description block-with-text"><%= charity.description %></div>
+            </div>
+            <div class="charity-card-action">
+              <div class="pigeon-button-medium pigeon-button-blue">Donate</div>
+              <div class="pigeon-button-medium pigeon-button-gray">Profile</div>
+            </div>
           </div>
         </div>
       <% end %>

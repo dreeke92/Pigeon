@@ -8,8 +8,8 @@
 
 puts "Destroying old records..."
 
-User.destroy_all
 Charity.destroy_all
+User.destroy_all
 Comment.destroy_all
 Donation.destroy_all
 Follow.destroy_all
@@ -103,11 +103,11 @@ admins << dree
 
 puts "Creating charities..."
 
-red_cross = Charity.new(name: "Red Cross", description: "The ICRC is an independent, neutral organization ensuring humanitarian protection and assistance for victims of armed conflict and other situations of violence. It takes action in response to emergencies and at the same time promotes respect for international humanitarian law and its implementation in national law.", website_url: "https://www.icrc.org/en", phone_number: "+41 22 734 60 01", email: 'red@cross.com', geographical_reach: "International", category: "Humanitarian aid", status: 'Accepted', user_id: steven.id, internal_rating: 5)
+red_cross = Charity.new(name: "Red Cross", description: "The ICRC is an independent, neutral organization ensuring humanitarian protection and assistance for victims of armed conflict and other situations of violence. ", website_url: "https://www.icrc.org/en", phone_number: "+41 22 734 60 01", email: 'red@cross.com', geographical_reach: "International", category: "Humanitarian aid", status: 'Accepted', user_id: steven.id, internal_rating: 5)
 red_cross.remote_photo_url = photo_red_cross
 red_cross.save!
 
-wwf = Charity.new(name: "WWF", description: "Our mission is to build a future in which people live in harmony with nature. From our experience as the world's leading independent conservation body, we know that the well-being of people, wildlife and the environment are closely linked. That's why we take an integrated approach to our work.", website_url: "https://www.wwf.org", phone_number: "0499 70 86 41", email: 'koen.stuyck@wwf.be', geographical_reach: "International", category: "Animal rights", status: 'Accepted', user_id: kenny.id, internal_rating: 4)
+wwf = Charity.new(name: "WWF", description: "Our mission is to build a future in which people live in harmony with nature. From our experience as the world's leading independent conservation body, we know that the well-being of people, wildlife and the environment are closely linked. ", website_url: "https://www.wwf.org", phone_number: "0499 70 86 41", email: 'koen.stuyck@wwf.be', geographical_reach: "International", category: "Animal rights", status: 'Accepted', user_id: kenny.id, internal_rating: 4)
 wwf.remote_photo_url = photo_wwf
 wwf.save!
 

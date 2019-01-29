@@ -1,29 +1,36 @@
+.pigeon-button-blue {
+  background: linear-gradient(90deg, #1244DD, #59a0f7);
+}
+.pigeon-button-blue:hover{
+  background: #1244DD;
+}
+
+.pigeon-button-gray {
+  background: linear-gradient(90deg, #6B8AAD, #9ab5d6);
+}
+.pigeon-button-gray:hover {
+  background: #6B8AAD;
+}
+
 .pigeon-button-small{
   font-size: 8px;
   background-color: $pigeon-blue;
   color: white;
-  height: 20px;
   border-radius: 10px;
-  padding: 4px 5px;
-  background: linear-gradient(90deg, #1244DD, #59a0f7);
+  padding: 3px 5px;
+  margin: 3px;
+  text-align: center;
 }
 
-.pigeon-button-small:hover{
-  background: #1244DD;
-}
 
 .pigeon-button-medium{
-  font-size: 14px;
+  font-size: 12px;
   background-color: $pigeon-blue;
   color: white;
-  height: 35px;
   border-radius: 20px;
-  padding: 8px 10px;
-  background: linear-gradient(90deg, #1244DD, #59a0f7);
-}
-
-.pigeon-button-medium:hover{
-  background: #1244DD;
+  padding: 6px 10px 6px 10px;
+  margin: 6px;
+  text-align: center;
 }
 
 .pigeon-button-large{
@@ -31,11 +38,8 @@
   color: white;
   border-radius: 50px;
   padding: 10px 15px;
-  background: linear-gradient(90deg, #1244DD, #59a0f7);
-}
-
-.pigeon-button-large:hover{
-  background: #1244DD;
+  margin: 10px;
+  text-align: center;
 }
 
 .button-holder{
