@@ -1,15 +1,31 @@
 <div class="container">
-  <div>
-    <div class="charity-banner">
-      <img src="https://www.bevanbuckland.co.uk/sites/www.bevanbuckland.co.uk/files/images/charity_banner2.jpg">
-    </div>
-    <div class="charity-profile-wrapper">
-      <div class="charity-profile-picture">
-        <%= cl_image_tag @charity.photo, :class => "charity-avatar" , crop: :fill %>
+  <div class="pigeon-container-white">
+    <div class="charity-profile-header">
+      <div class="charity-profile-profile">
+        <%= cl_image_tag @charity.photo, crop: :fill, class: "charity-avatar-large" %>
+        <div class="charity-profile-title">
+          <div class="charity-profile-name"><h2>charity name</h2></div>
+          <div class="charity-profile-category"><h3>charity category</h3></div>
+        </div>
       </div>
-      <div class="charity-profile-name">
-        <h2><%= @charity.name %></h2>
+      <div>
+        <div class="charity-profile-followers-display">
+          <i class="fas fa-dove"></i>
+          <div class="charity-profile-followers">1,500</div>
+        </div>
+        <div class="charity-profile-thermometer-display">
+          <div>Thermometer</div>
+          <div class="charity-profile-termometer">Progressbar</div>
+        </div>
       </div>
     </div>
+    <div class="charity-profile-action">
+      <div class="pigeon-button-large pigeon-button-blue">Donate</div>
+      <div class="pigeon-button-large pigeon-button-gray">Follow</div>
+    </div>
+  </div>
+
+  <div class="pigeon-container-white">
+
   </div>
 </div>

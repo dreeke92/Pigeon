@@ -6,13 +6,33 @@
   border-radius: 50%;
 }
 
-.charity-avatar {
-  width: 100%;
-  height: 100%;
-  border-radius: 100px;
+.charity-avatar-large {
+  margin: 10px;
+  vertical-align: middle;
+  border: 2px $pigeon-light-gray solid;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   background-color: white;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-  padding: 2px;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 750px) {
+  .charity-avatar-large{
+    margin: 8px;
+    border: 1px $pigeon-light-gray solid;
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 500px) {
+  .charity-avatar-large{
+    margin: 5px;
+    border: 1px $pigeon-light-gray solid;
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .charity-avatar-small{
