@@ -7,7 +7,6 @@
 }
 
 .charity-avatar-large {
-  margin: 10px;
   vertical-align: middle;
   border: 2px $pigeon-light-gray solid;
   width: 120px;
@@ -19,7 +18,6 @@
 
 @media (max-width: 750px) {
   .charity-avatar-large{
-    margin: 8px;
     border: 1px $pigeon-light-gray solid;
     width: 90px;
     height: 90px;
@@ -28,7 +26,6 @@
 
 @media (max-width: 500px) {
   .charity-avatar-large{
-    margin: 5px;
     border: 1px $pigeon-light-gray solid;
     width: 60px;
     height: 60px;
@@ -36,7 +33,6 @@
 }
 
 .charity-avatar-small{
-  margin: 5px;
   vertical-align: middle;
   border: 1px $pigeon-light-gray solid;
   border-radius: 50%;

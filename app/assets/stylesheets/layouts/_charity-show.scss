@@ -1,3 +1,22 @@
+.pigeon-container-profile{
+  background-color: white;
+  padding: 10px;
+  margin: 25px auto 10px auto;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 750px){
+  .pigeon-container-profile{
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 500px){
+  .pigeon-container-profile{
+    margin-top: 5px;
+  }
+}
+
 .charity-profile-header{
   display: flex;
   justify-content: space-between;
@@ -5,10 +24,116 @@
 
 .charity-profile-profile{
   display: flex;
+  position: relative;
+  top: -35px;
+}
+
+@media (max-width: 750px) {
+  .charity-profile-profile{
+    position: relative;
+    top: -30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .charity-profile-profile{
+    position: relative;
+    top: -25px;
+  }
+}
+
+.charity-profile-avatar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.charity-profile-followers-display{
+  position: relative;
+  top: 0px;
+  right: 0px;
 }
 
 .charity-profile-title{
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.charity-profile-name{
+  margin-left: 8px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+@media (max-width: 750px){
+  .charity-profile-name{
+    margin-left: 5px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 500px){
+  .charity-profile-name{
+    margin-left: 3px;
+    font-size: 18px;
+  }
+}
+
+.charity-profile-category{
+  margin-left: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: $pigeon-gray;
+}
+
+.invisible{
+  visibility: hidden;
+}
+
+@media (max-width: 750px){
+  .charity-profile-category{
+    margin-left: 5px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px){
+  .charity-profile-category{
+    margin-left: 3px;
+    font-size: 12px;
+  }
+}
+
+.charity-profile-action{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.charity-profile-followers-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  position: relative;
+  top: -25px;
+  color: $pigeon-dark-gray;
+}
+
+@media (max-width: 750px) {
+  .charity-profile-followers-display{
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .charity-profile-followers-display{
+    font-size: 12px;
+  }
+}
+
+.charity-profile-followers{
+  margin-left: 10px;
+  margin-right: 10px;
 }
