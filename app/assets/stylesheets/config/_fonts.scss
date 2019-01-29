@@ -1,10 +1,8 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,600|Source+Sans+Pro:300,400,400i,600');
-
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway');
 // Define fonts for body and headers
-$body-font: 'Source Sans Pro', sans-serif;
-$headers-font: 'Montserrat', sans-serif;
+$body-font: 'Montserrat', sans-serif;
+$headers-font: 'Raleway', sans-serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

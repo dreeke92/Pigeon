@@ -48,16 +48,45 @@
 /* Add a black background color to the top navigation */
 
 .topnav {
-  background-color: $pigeon-white;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  height: 40px;
+  color: $pigeon-dark-gray;
+}
+
+.nav-container{
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.05);
 }
 
 .creditnav {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-item{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.navbar-item:hover{
+  color: $pigeon-blue;
+}
+
+.credits-display{
+  margin: 0 0 0px;
+  font-size: 22px;
+}
+
+.notification-menu {
+  align-items: center;
 }
 
 .navbar-avatar .avatar {
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
 }
