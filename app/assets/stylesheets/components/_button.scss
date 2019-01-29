@@ -1,13 +1,48 @@
-.btn-pigeon {
-  color: #999999;
-  border: 1px solid #999999;
-  padding: 10px 15px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
+.pigeon-button-blue {
+  background: linear-gradient(90deg, #1244DD, #59a0f7);
 }
-.btn-pigeon:hover {
-  opacity: 1;
-  text-decoration: none;
-  color: #999999;
+.pigeon-button-blue:hover{
+  background: #1244DD;
+}
+
+.pigeon-button-gray {
+  background: linear-gradient(90deg, #6B8AAD, #9ab5d6);
+}
+.pigeon-button-gray:hover {
+  background: #6B8AAD;
+}
+
+.pigeon-button-small{
+  font-size: 8px;
+  background-color: $pigeon-blue;
+  color: white;
+  border-radius: 10px;
+  padding: 3px 5px;
+  margin: 3px;
+  text-align: center;
+}
+
+
+.pigeon-button-medium{
+  font-size: 12px;
+  background-color: $pigeon-blue;
+  color: white;
+  border-radius: 20px;
+  padding: 6px 10px 6px 10px;
+  margin: 6px;
+  text-align: center;
+}
+
+.pigeon-button-large{
+  background-color: $pigeon-blue;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 15px;
+  margin: 10px;
+  text-align: center;
+}
+
+.button-holder{
+  display: flex;
+  justify-content: space-around;
 }
