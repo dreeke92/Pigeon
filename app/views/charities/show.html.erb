@@ -1,22 +1,19 @@
 <div class="container">
-  <div class="pigeon-container-white">
+  <div class="pigeon-container-profile">
     <div class="charity-profile-header">
       <div class="charity-profile-profile">
-        <%= cl_image_tag @charity.photo, crop: :fill, class: "charity-avatar-large" %>
+        <div class="charity-profile-avatar">
+          <%= cl_image_tag @charity.photo, crop: :fill, class: "charity-avatar-large" %>
+        </div>
         <div class="charity-profile-title">
-          <div class="charity-profile-name"><h2>charity name</h2></div>
-          <div class="charity-profile-category"><h3>charity category</h3></div>
+          <p class="charity-profile-category invisible">invisible</p>
+          <h3 class="charity-profile-name">charity name</h3>
+          <p class="charity-profile-category">charity category</p>
         </div>
       </div>
-      <div>
-        <div class="charity-profile-followers-display">
-          <i class="fas fa-dove"></i>
-          <div class="charity-profile-followers">1,500</div>
-        </div>
-        <div class="charity-profile-thermometer-display">
-          <div>Thermometer</div>
-          <div class="charity-profile-termometer">Progressbar</div>
-        </div>
+      <div class="charity-profile-followers-display">
+        <i class="fas fa-dove charity-profile-follower-item"></i>
+        <div class="charity-profile-followers">1,500</div>
       </div>
     </div>
     <div class="charity-profile-action">
