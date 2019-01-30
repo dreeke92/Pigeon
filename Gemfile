@@ -18,6 +18,8 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'simple_form'
 gem 'carrierwave', '~> 1.2'
+gem 'masonry-rails'
+gem 'bootstrap', '~> 4.0.0.alpha3'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

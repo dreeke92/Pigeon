@@ -14,7 +14,6 @@
 
 .pigeon-button-small{
   font-size: 8px;
-  background-color: $pigeon-blue;
   color: white;
   border-radius: 10px;
   padding: 3px 5px;
@@ -25,7 +24,6 @@
 
 .pigeon-button-medium{
   font-size: 12px;
-  background-color: $pigeon-blue;
   color: white;
   border-radius: 20px;
   padding: 6px 10px 6px 10px;
@@ -34,11 +32,10 @@
 }
 
 .pigeon-button-large{
-  background-color: $pigeon-blue;
   color: white;
-  border-radius: 50px;
-  padding: 10px 15px;
-  margin: 10px;
+  border-radius: 20px;
+  padding: 8px 15px;
+  margin: 8px;
   text-align: center;
 }
 

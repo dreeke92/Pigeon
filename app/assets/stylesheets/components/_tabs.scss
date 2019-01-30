@@ -1,0 +1,48 @@
+.charity-tabs {
+  background: white;
+  display: flex;
+  margin-top: 10px;
+  font-size: 18px;
+  box-shadow: -10px -10px 10px rgba(0,0,0,0.05);
+  border-radius: 10px 0 0 0;
+}
+@media (max-width: 750px) {
+  .charity-tabs {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .charity-tabs {
+    font-size: 12px;
+  }
+}
+
+.charity-tabs a {
+  color: $pigeon-dark-gray;
+}
+.charity-tabs a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.charity-tabs p {
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+.charity-tab {
+  background: $pigeon-light-gray;
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+}
+.charity-tab:first-child {
+  border-radius: 10px 0 0 0;
+}
+.charity-tab:last-child {
+  border-radius: 0 10px 0 0;
+}
+.charity-tab.active {
+  background: white;
+  color: $pigeon-blue;
+}

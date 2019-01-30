@@ -51,9 +51,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 22px;
+  font-size: 20px;
   height: 40px;
   color: $pigeon-dark-gray;
+}
+
+@media (max-width: 750px) {
+  .topnav{
+    font-size: 16px;
+  }
 }
 
 .nav-container{
@@ -78,7 +84,7 @@
 
 .credits-display{
   margin: 0 0 0px;
-  font-size: 20px;
+  // font-size: 20px;
 }
 
 .notification-menu {
