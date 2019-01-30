@@ -1,8 +1,9 @@
 .pigeon-container-profile{
   background-color: white;
   padding: 10px;
-  margin: 25px auto 10px auto;
+  margin: 30px auto 10px auto;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
 }
 
 @media (max-width: 750px){
@@ -20,6 +21,19 @@
 .charity-profile-header{
   display: flex;
   justify-content: space-between;
+  height: 100px;
+}
+
+@media (max-width: 750px){
+  .charity-profile-header{
+    height: 90px;
+  }
+}
+
+@media (max-width: 500px){
+  .charity-profile-header{
+    height: 80px;
+  }
 }
 
 .charity-profile-profile{
@@ -68,14 +82,12 @@
 
 @media (max-width: 750px){
   .charity-profile-name{
-    margin-left: 5px;
     font-size: 24px;
   }
 }
 
 @media (max-width: 500px){
   .charity-profile-name{
-    margin-left: 3px;
     font-size: 18px;
   }
 }
@@ -94,14 +106,14 @@
 
 @media (max-width: 750px){
   .charity-profile-category{
-    margin-left: 5px;
     font-size: 16px;
+    margin-top: 3px;
+    margin-bottom: 3px;
   }
 }
 
 @media (max-width: 500px){
   .charity-profile-category{
-    margin-left: 3px;
     font-size: 12px;
   }
 }
@@ -109,6 +121,13 @@
 .charity-profile-action{
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 500px) {
+  .charity-profile-action{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .charity-profile-followers-display {
@@ -136,4 +155,30 @@
 .charity-profile-followers{
   margin-left: 10px;
   margin-right: 10px;
+}
+
+#charity-profile-button-offset{
+  position: relative;
+  top: -10px;
+  margin: 0px 10px 0px 10px;
+}
+
+@media (max-width: 750px) {
+  #charity-profile-button-offset{
+    font-size: 12px;
+    padding: 6px 10px 6px 10px;
+    margin: 0px 6px 0px 6px;
+    position: relative;
+    top: -5px;
+  }
+}
+
+@media (max-width: 500px) {
+  #charity-profile-button-offset{
+    // font-size: 8px;
+    // padding: 3px 5px 3px 5px;
+    // margin: 0px 3px 0px 3px;
+    position: relative;
+    top: -5px;
+  }
 }

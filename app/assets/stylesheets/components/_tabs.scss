@@ -1,0 +1,47 @@
+.tabs {
+  background: white;
+  display: flex;
+  margin-top: 10px;
+  font-size: 18px;
+}
+@media (max-width: 750px) {
+  .tabs {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .tabs {
+    font-size: 12px;
+  }
+}
+
+.tabs a {
+  color: $pigeon-dark-gray;
+}
+.tabs a:hover {
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.tabs p {
+  opacity: 0.8;
+  margin-bottom: 0;
+}
+.tab {
+  background: $pigeon-light-gray;
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: -10px -10px 10px rgba(0,0,0,0.05);
+}
+.tab:first-child {
+  border-radius: 10px 0 0 0;
+}
+.tab:last-child {
+  border-radius: 0 10px 0 0;
+}
+.tab.active {
+  background: white;
+  color: $pigeon-dark-gray;
+}
