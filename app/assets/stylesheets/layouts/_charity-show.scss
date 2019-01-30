@@ -1,9 +1,10 @@
 .pigeon-container-profile{
   background-color: white;
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
   margin: 30px auto 10px auto;
-  box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
-  border-radius: 10px;
+  // box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+  // border-top-left-radius: 10px;
+  // border-top-right-radius: 10px;
 }
 
 @media (max-width: 750px){
@@ -180,5 +181,22 @@
     // margin: 0px 3px 0px 3px;
     position: relative;
     top: -5px;
+  }
+}
+
+.charity-pages-container {
+  padding: 10px 10px 0px 10px;
+  font-size: 16px;
+}
+
+@media (max-width: 750px){
+.charity-pages-container {
+  font-size: 14px;
+  }
+}
+
+@media (max-width: 500px){
+  .charity-pages-container {
+  font-size: 12px;
   }
 }
