@@ -126,19 +126,19 @@ oxfam.save!
 
 puts "creating posts"
 
-wwf_post_1 = Post.new(content: "blablablablabla", charity_id: wwf.id)
+wwf_post_1 = Post.new(content: "Description decription description", charity_id: wwf.id)
 wwf_post_1.save!
-wwf_post_2 = Post.new(content: "Koekoekoekoekoekeok", charity_id: wwf.id)
+wwf_post_2 = Post.new(content: "Description decription description Description decription description", charity_id: wwf.id)
 wwf_post_2.save!
-wwf_post_3 = Post.new(content: "trololololololo", charity_id: wwf.id)
+wwf_post_3 = Post.new(content: "Description decription description Description decription description Description decription description", charity_id: wwf.id)
 wwf_post_3.save!
-wwf_post_4 = Post.new(content: "okeeeeeeee", charity_id: wwf.id)
+wwf_post_4 = Post.new(content: "Description decription description Description decription description Description decription description Description decription description", charity_id: wwf.id)
 wwf_post_4.save!
-wwf_post_5 = Post.new(content: "niceeeeeeeeeeee", charity_id: wwf.id)
+wwf_post_5 = Post.new(content: "Description decription description Description decription description Description decription description Description decription description Description decription description Description decription description Description decription description Description decription description", charity_id: wwf.id)
 wwf_post_5.save!
-wwf_post_6 = Post.new(content: "majaaaaaaaaaaaaa", charity_id: wwf.id)
+wwf_post_6 = Post.new(content: "Description decription description Description decription description Description decription description Description decription description", charity_id: wwf.id)
 wwf_post_6.save!
-wwf_post_7 = Post.new(content: "Guuuuuuuuuuuuud", charity_id: wwf.id)
+wwf_post_7 = Post.new(content: "Description decription description Description decription description Description decription description", charity_id: wwf.id)
 wwf_post_7.save!
 
 puts "Adding pictures to users"
