@@ -22,7 +22,7 @@ gem 'webpacker'
 gem 'simple_form'
 gem 'carrierwave', '~> 1.2'
 gem 'masonry-rails', '~> 0.2.4'
-gem 'bootstrap', '~> 4.0.0.alpha3'
+# gem 'bootstrap', '~> 4.0.0.alpha3'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

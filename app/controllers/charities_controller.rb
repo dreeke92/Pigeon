@@ -17,11 +17,11 @@ class CharitiesController < ApplicationController
 
   def index
     @charities = Charity.all
-
   end
 
   def show
     @charity = Charity.find(params[:id])
+    @posts = @charity.posts
   end
 
   def charity_params
