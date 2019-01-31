@@ -12,10 +12,10 @@ function initMasonry() {
     // options
   });
 
-  $('.grid').masonry({
-    itemSelector: '.grid-item',
-    columnWidth: 160
-  });
+  // $('.grid').masonry({
+  //   itemSelector: '.grid-item',
+  //   columnWidth: 160
+  // });
 };
 
 export { initMasonry };
