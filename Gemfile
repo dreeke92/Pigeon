@@ -24,6 +24,7 @@ gem 'carrierwave', '~> 1.2'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'coffee-script-source', '~> 1.11', '>= 1.11.1'
 gem 'sprockets', '>= 3.0.0'
+gem 'omniauth-facebook'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
