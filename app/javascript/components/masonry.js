@@ -3,7 +3,8 @@ function initMasonry() {
   var msnry = new Masonry( elem, {
     // options
     itemSelector: '.grid-item',
-    columnWidth: 200
+    columnWidth: 200,
+    // percentPosition:true
   });
 
   // element argument can be a selector string

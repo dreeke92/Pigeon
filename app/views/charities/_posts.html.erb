@@ -1,8 +1,20 @@
 <div class="grid">
+  <!-- <div class="grid-sizer"></div> -->
   <% @posts.each do |post| %>
     <div class="grid-item">
-      <div class="charity-post-picture"><p>This is a picture</p></div>
-      <div><%= post.content %></div>
+      <div class="charity-post-card" style="">
+        <div class="charity-post-card-header">
+          <div class="charity-post-card-profile">
+            <%= cl_image_tag charity.photo, crop: :fill, class: "charity-avatar-small" %>
+            <div class="charity-post-card-title">
+              <h5 class="charity-card-name"><%= charity.name %></h5>
+              <p class="charity-post-card-category"><%= charity.category %></p>
+            </div>
+          </div>
+        </div>
+        <div class="charity-post-picture"><p>This is a picture</p></div>
+        <div><%= post.content %></div>
+      </div>
     </div>
   <% end %>
 </div>

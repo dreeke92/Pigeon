@@ -1,4 +1,4 @@
-.card {
+.charity-profile-card {
   color: black;
   background-color: white;
   box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
@@ -11,31 +11,31 @@
   border-radius: 10px;
 }
 
-.charity-card-header{
+.charity-profile-card-header{
   display: flex;
   justify-content: space-between;
   height: 80px;
 }
 
-.charity-card-profile{
+.charity-profile-card-profile{
   display: flex;
   // vertical-align: center;
   // align-items: center;
 }
 
-.charity-card-title{
+.charity-profile-card-title{
   // display: flex;
   // flex-direction: column;
   // justify-content: space-around;
 }
 
-.charity-card-name{
+.charity-profile-card-name{
   margin: 8px;
   // font-weight: bold;
   // position: relative;
   // top: 18px;
 }
-.charity-card-category{
+.charity-profile-card-category{
   font-size: 14px;
   // position: relative;
   // top: 10px;
@@ -44,7 +44,7 @@
   margin-right: 8px;
 }
 
-.charity-card-followers{
+.charity-profile-card-followers{
   display: flex;
   vertical-align: center;
   align-items: center;
@@ -55,11 +55,11 @@
   // align-items: center;
 }
 
-.charity-card-followers-display {
+.charity-profile-card-followers-display {
   margin: 0 0 0 5px;
 }
 
-.charity-card-description{
+.charity-profile-card-description{
   padding: 5px 15px 15px 15px;
   font-size: 12px;
   width: 100%;
@@ -70,7 +70,79 @@
   // text-overflow: ellipsis;
 }
 
-.charity-card-action{
+.charity-profile-card-action{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.charity-post-card {
+  background: white;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+}
+
+.charity-post-card-header{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.charity-post-card-profile{
+  display: flex;
+  // vertical-align: center;
+  // align-items: center;
+}
+
+.charity-post-card-title{
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+}
+
+.charity-post-card-name{
+  margin: 8px;
+  // font-weight: bold;
+  // position: relative;
+  // top: 18px;
+}
+.charity-post-card-category{
+  font-size: 14px;
+  // position: relative;
+  // top: 10px;
+  color: $pigeon-gray;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.charity-post-card-followers{
+  display: flex;
+  vertical-align: center;
+  align-items: center;
+  justify-content: space-between;
+  color: $pigeon-dark-gray;
+  font-size: 16px;
+  margin: 8px;
+  // align-items: center;
+}
+
+.charity-post-card-followers-display {
+  margin: 0 0 0 5px;
+}
+
+.charity-post-card-description{
+  padding: 5px 15px 15px 15px;
+  font-size: 12px;
+  width: 100%;
+  height: 130px;
+  font-style: italic;
+  // white-space: nowrap;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+}
+
+.charity-post-card-action{
   display: flex;
   justify-content: flex-end;
 }
