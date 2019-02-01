@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :donations, only: [ :create]
   resources :follows, only: [ :create, :update]
   resources :likes, only: [ :create, :update]
-  resources :posts, only: [ :new, :create, :edit, :update]
+  resources :posts, only: [ :new, :create, :edit, :update, :index]
   resources :ratings, only: [ :create, :update]
 
 end

@@ -1,0 +1,54 @@
+
+<div class="container">
+  <div class="search-input-container">
+    <div class="search-input">This is gonna be a search div</div>
+  </div>
+  <div class="filter-item-container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="filter-item">NGO/charity</div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="filter-item">Type</div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="filter-item">Geography</div>
+      </div>
+    </div>
+  </div>
+  <div class="grid">
+    <% @posts.each do |post| %>
+      <div class="grid-item">
+        <div class="charity-post-card" style="">
+          <div class="charity-post-card-header">
+            <div class="charity-post-card-profile">
+              <div class="charity-post-card-profile-avatar">
+                <%= cl_image_tag post.charity.photo, crop: :fill, class: "charity-avatar-xtra-small" %>
+              </div>
+              <div class="charity-post-card-title">
+                <p class="charity-post-card-name"><%= post.charity.name %></p>
+                <p class="charity-post-card-category"><%= post.charity.category %></p>
+              </div>
+            </div>
+            <div class="charity-post-card-date">
+                <p><%= post.created_at.to_date %></p>
+            </div>
+          </div>
+          <div class="charity-post-card-picture">
+            <p>This is a picture</p>
+          </div>
+          <div class="charity-post-card-description"><%= post.content %>
+          </div>
+          <div class="charity-post-card-action">
+            <div class="charity-post-card-like">
+              <i class="fas fa-heart charity-post-card-heart"></i>
+              <p class="charity-post-card-like-number">1,500</p>
+            </div>
+            <div class="pigeon-button-medium pigeon-button-blue">Donate</div>
+            <div class="pigeon-button-medium pigeon-button-gray">Profile</div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
