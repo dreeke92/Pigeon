@@ -15,16 +15,34 @@
         <div class="credits-display">1,500</div>
       </div>
 
-
       <div class="navbar-avatar">
-        <img src="https://avatars0.githubusercontent.com/u/43139321?v=4" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
+        <img src="https://avatars0.githubusercontent.com/u/43139321?v=4" class="avatar">
       </div>
 
-
-      <div class="notification-menu">
-        <i class="far fa-bell navbar-item"></i>
-        <i class="fas fa-bars navbar-item"></i>
+      <div class="notification-menu navbar-wagon-item">
+        <div class="dropdown">
+          <i class="far fa-bell navbar-item"></i>
+        </div>
+        <div class="dropdown">
+          <i class="fas fa-bars navbar-item dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
+          <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
+            <% if user_signed_in? %>
+              <li>
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <i class="fa fa-sign-out"></i>  <%= t(".sign_out", default: "Log out") %>
+                <% end %>
+              </li>
+            <% else %>
+              <li><a href="#">Log in</a></li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+
+
