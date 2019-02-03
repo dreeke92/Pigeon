@@ -1,1 +1,74 @@
-<h1>settings page</h1>
+<div class="pigeon-container-settings">
+  <h3 class="pigeon-settings-header">Settings</h3>
+    <div class="pigeon-settings-devider">
+      <div class="pigeon-settings-container">
+        <div class="pigeon-settings-title">
+          <i class="fas fa-hand-holding-heart settings-credit-icon"></i>
+          <div>Credits</div>
+        </div>
+        <div class="settings-flex">
+          <div class="settings-credit-display pigeon-button-width">1,500</div>
+          <div class="pigeon-button-blue pigeon-button-large pigeon-button-width">Buy</div>
+        </div>
+      </div>
+    </div>
+    <div class="pigeon-settings-devider">
+      <div class="pigeon-settings-container">
+        <div class="pigeon-settings-title">
+          <i class="fas fa-cog settings-credit-icon"></i>
+          <div>Change preferences</div>
+        </div>
+        <div class="settings-flex">
+          <div class="pigeon-button-blue pigeon-button-large pigeon-button-width"> Edit </div>
+        </div>
+      </div>
+    </div>
+    <div class="pigeon-settings-devider">
+      <div class="pigeon-settings-container">
+        <div class="pigeon-settings-title">
+          <i class="fas fa-dove settings-credit-icon"></i>
+          <div>Follow NGOs and charities</div>
+        </div>
+        <div class="settings-flex">
+          <div class="pigeon-button-blue pigeon-button-large pigeon-button-width">Search</div>
+        </div>
+      </div>
+      <div class="settings-units-container">
+        <% @charities.each do |charity| %>
+          <div class="settings-unit">
+            <div class="settings-flex">
+              <%= cl_image_tag charity.photo, crop: :fill, class: "charity-avatar-xtra-small" %>
+              <div class="settings-unit-name">
+                <%= charity.name %>
+              </div>
+            </div>
+            <i class="fas fa-dove settings-unit-icon"></i>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="pigeon-settings-devider">
+      <div class="pigeon-settings-container">
+        <div class="pigeon-settings-title">
+          <i class="fas fa-user-friends settings-credit-icon"></i>
+          <div>Follow friends</div>
+        </div>
+        <div class="settings-flex">
+          <div class="pigeon-button-blue pigeon-button-large pigeon-button-width">Search</div>
+        </div>
+      </div>
+      <div class="settings-units-container">
+        <% @users.each do |user| %>
+          <div class="settings-unit">
+            <div class="settings-flex">
+              <%= cl_image_tag user.photo, crop: :fill, class: "charity-avatar-xtra-small" %>
+              <div class="settings-unit-name">
+                <%= user.first_name %> <%= user.last_name %>
+              </div>
+            </div>
+            <i class="fas fa-dove settings-unit-icon"></i>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>
