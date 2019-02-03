@@ -1,8 +1,9 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300i,400,600|Open+Sans:300i,400,600');
+@import url('https://fonts.googleapis.com/css?family=Krub:300,300i,400,400i,700|Montserrat:300,300i,400,400i,700');
 // Define fonts for body and headers
-$body-font: 'Open Sans', sans-serif;
+$body-font: 'Krub', sans-serif;
 $headers-font: 'Montserrat', sans-serif;
+
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -12,4 +13,3 @@ $headers-font: 'Montserrat', sans-serif;
 //        font-url('FontFile.woff') format('woff'),
 //        font-url('FontFile.ttf') format('truetype')
 // }
-// $my-font: "Font Name";
