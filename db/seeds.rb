@@ -8,14 +8,16 @@
 
 puts "Destroying old records..."
 
-Charity.destroy_all
-User.destroy_all
-Comment.destroy_all
 Donation.destroy_all
 Follow.destroy_all
 Like.destroy_all
 Post.destroy_all
 Rating.destroy_all
+Comment.destroy_all
+CharityTheme.destroy_all
+CharityType.destroy_all
+Charity.destroy_all
+User.destroy_all
 
 
 puts "Downloading charity photos..."
@@ -124,7 +126,61 @@ oxfam = Charity.new(name: "Oxfam", description: "While the richest continue to e
 oxfam.remote_photo_url = photo_oxfam
 oxfam.save!
 
-puts "creating posts"
+puts "Creating charity themes..."
+
+agriculture = CharityTheme.new(name: "Agriculture")
+agriculture.save!
+animals = CharityTheme.new(name: "Animal rights & Protection")
+animals.save!
+climate = CharityTheme.new(name: "Climate Change & Environment")
+climate.save!
+coordination = CharityTheme.new(name: "Coordination")
+coordination.save!
+disaster = CharityTheme.new(name: "Disaster Management")
+disaster.save!
+education = CharityTheme.new(name: "Education")
+education.save!
+food = CharityTheme.new(name: "Food and Nutrition")
+food.save!
+gender = CharityTheme.new(name: "Gender")
+gender.save!
+health = CharityTheme.new(name: "Health")
+health.save!
+aids = CharityTheme.new(name: "HIV/Aids")
+aids.save!
+mining = CharityTheme.new(name: "Mine action")
+mining.save!
+peacekeeping = CharityTheme.new(name: "Peacekeeping and Peacebuilding")
+peacekeeping.save!
+protection = CharityTheme.new(name: "Protection and Human Rights")
+protection.save!
+recovery = CharityTheme.new(name: "Recovery and Reconstruction")
+recovery.save!
+safety = CharityTheme.new(name: "Safety and security")
+safety.save!
+shelter = CharityTheme.new(name: "Shelter and non-food items")
+shelter.save!
+water = CharityTheme.new(name: "Water sanition Hygiene")
+water.save!
+
+puts "Creating charity types..."
+
+academic = CharityType.new(name: "Academic and Research Institutions")
+academic.save!
+government = CharityType.new(name: "Government")
+government.save!
+international = CharityType.new(name: "Internation organization")
+international.save!
+media = CharityType.new(name: "Media")
+media.save!
+ngo = CharityType.new(name: "Non-governmental Organization (NGO)")
+ngo.save!
+charity = CharityType.new(name: "Local charity")
+charity.save!
+other = CharityType.new(name: "Other")
+other.save!
+
+puts "creating posts..."
 
 wwf_post_1 = Post.new(content: "Description decription description", charity_id: wwf.id)
 wwf_post_1.save!
@@ -141,7 +197,7 @@ wwf_post_6.save!
 wwf_post_7 = Post.new(content: "Description decription description Description decription description Description decription description", charity_id: wwf.id)
 wwf_post_7.save!
 
-puts "Adding pictures to users"
+puts "Adding pictures to users..."
 
 users.each do |user|
   case user.first_name

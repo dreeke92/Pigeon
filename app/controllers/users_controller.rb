@@ -10,5 +10,10 @@ class UsersController < ApplicationController
     @charities = Charity.all
   end
 
+  def preferences
+    @themes = CharityTheme.all
+    @types = CharityType.all
+  end
+
   private
 end
