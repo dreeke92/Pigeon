@@ -1,0 +1,29 @@
+.pigeon-container-preferences{
+  background-color: white;
+  padding: 10px;
+  margin: 10px auto 10px auto;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+.pigeon-preferences-header{
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 750px){
+  .pigeon-preferences-header{
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 500px){
+  .pigeon-preferences-header{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

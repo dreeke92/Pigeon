@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_01_172510) do
+ActiveRecord::Schema.define(version: 2019_02_03_162251) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,54 @@ ActiveRecord::Schema.define(version: 2019_02_01_172510) do
     t.string "photo"
     t.text "long_description"
     t.index ["user_id"], name: "index_charities_on_user_id"
+  end
+
+  create_table "charity_theme_preferences", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "charity_theme_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["charity_theme_id"], name: "index_charity_theme_preferences_on_charity_theme_id"
+    t.index ["user_id"], name: "index_charity_theme_preferences_on_user_id"
+  end
+
+  create_table "charity_theme_relations", force: :cascade do |t|
+    t.bigint "charity_id"
+    t.bigint "charity_theme_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["charity_id"], name: "index_charity_theme_relations_on_charity_id"
+    t.index ["charity_theme_id"], name: "index_charity_theme_relations_on_charity_theme_id"
+  end
+
+  create_table "charity_themes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "charity_type_preferences", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "charity_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["charity_type_id"], name: "index_charity_type_preferences_on_charity_type_id"
+    t.index ["user_id"], name: "index_charity_type_preferences_on_user_id"
+  end
+
+  create_table "charity_type_relations", force: :cascade do |t|
+    t.bigint "charity_id"
+    t.bigint "charity_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["charity_id"], name: "index_charity_type_relations_on_charity_id"
+    t.index ["charity_type_id"], name: "index_charity_type_relations_on_charity_type_id"
+  end
+
+  create_table "charity_types", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
@@ -118,6 +166,14 @@ ActiveRecord::Schema.define(version: 2019_02_01_172510) do
   end
 
   add_foreign_key "charities", "users"
+  add_foreign_key "charity_theme_preferences", "charity_themes"
+  add_foreign_key "charity_theme_preferences", "users"
+  add_foreign_key "charity_theme_relations", "charities"
+  add_foreign_key "charity_theme_relations", "charity_themes"
+  add_foreign_key "charity_type_preferences", "charity_types"
+  add_foreign_key "charity_type_preferences", "users"
+  add_foreign_key "charity_type_relations", "charities"
+  add_foreign_key "charity_type_relations", "charity_types"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
   add_foreign_key "donations", "charities"
