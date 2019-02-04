@@ -1,3 +1,52 @@
 <div class="pigeon-container-preferences">
-  <h3 class="pigeon-preferences-header">Preferences</h3>
+
+  <%= form_for(@user) do |f| %>
+
+    <h2>Organizations</h2>
+    <div class="preferences-field">
+      <%= hidden_field_tag "user[charity_type_ids][]", nil %>
+      <% @types.each do |type| %>
+        <label class="preferences-check-container">
+          <%= check_box_tag "user[charity_type_ids][]", type.id, @user.charity_type_ids.include?(type.id), id: dom_id(type) %>
+          <span class="checkmark"></span>
+          <%= label_tag dom_id(type), type.name, :class => "preferences-check-name" %>
+        </label>
+      <% end %>
+    </div>
+
+
+    <h2>Social topics</h2>
+    <div class="preferences-field">
+      <%= hidden_field_tag "user[charity_theme_ids][]", nil %>
+      <% @themes.each do |theme| %>
+        <label class="preferences-check-container">
+          <%= check_box_tag "user[charity_theme_ids][]", theme.id, @user.charity_theme_ids.include?(theme.id), id: dom_id(theme) %>
+          <span class="checkmark"></span>
+          <%= label_tag dom_id(theme), theme.name, :class => "preferences-check-name" %><br>
+        </label>
+      <% end %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+  <% end %>
+
 </div>
+
+
+
+
+<!-- <div class="pigeon-container-preferences">
+  <h2>Social topics</h2>
+  <%= simple_form_for @user do |f| %>
+  <div class="preferences-check-container">
+    <%= f.association :charity_types, as: :check_boxes, item_wrapper_class: 'preferences-check-item' , :input_html => { :class => "preferences-checkbox" }%>
+    <%= f.association :charity_themes, as: :check_boxes, item_wrapper_class: 'preferences-check-item' , :input_html => { :class => "preferences-checkbox" }%>
+    <%= f.button :submit, "Proceed", class: "pigeon-button-submit pigeon-button-blue"  %>
+  </div>
+  <% end %>
+</div> -->
+
+

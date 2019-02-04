@@ -13,7 +13,18 @@ class UsersController < ApplicationController
   def preferences
     @themes = CharityTheme.all
     @types = CharityType.all
+    @user = current_user
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    @user.save
   end
 
   private
+
+  def user_params
+    params.require(:user).permit(:charity_theme_ids => [], :charity_type_ids => [])
+  end
 end

@@ -9,6 +9,10 @@ class User < ApplicationRecord
   has_many :likes
   has_many :comments
   mount_uploader :photo, PhotoUploader
+  has_many :charity_type_preferences
+  has_many :charity_theme_preferences
+  has_many :charity_types, through: :charity_type_preferences
+  has_many :charity_themes, through: :charity_theme_preferences
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
