@@ -2,37 +2,52 @@
 
   <%= form_for(@user) do |f| %>
 
-    <h2>Organizations</h2>
-    <div class="preferences-field">
-      <%= hidden_field_tag "user[charity_type_ids][]", nil %>
-      <% @types.each do |type| %>
-        <label class="preferences-check-container">
-          <%= check_box_tag "user[charity_type_ids][]", type.id, @user.charity_type_ids.include?(type.id), id: dom_id(type) %>
-          <span class="checkmark"></span>
-          <%= label_tag dom_id(type), type.name, :class => "preferences-check-name" %>
-        </label>
-      <% end %>
+    <div class="preferences-flex">
+      <h2 class="preferences-main-header">User preferences</h2>
+
+      <div class="preferences-actions">
+        <div class="pigeon-button-gray pigeon-button-large pigeon-button-width">Skip</div>
+        <div class="actions">
+          <%= f.submit "confirm", :class => "pigeon-button-blue pigeon-button-submit pigeon-button-width"  %>
+        </div>
+      </div>
     </div>
 
+    <div class="preferences-variable-flex">
+      <div class="preferences-box">
+        <h3 class="pigeon-preferences-header">Organizations</h3>
+        <div class="preferences-field">
+          <%= hidden_field_tag "user[charity_type_ids][]", nil %>
+          <% @types.each do |type| %>
+            <label class="preferences-check-container">
+              <%= check_box_tag "user[charity_type_ids][]", type.id, @user.charity_type_ids.include?(type.id), id: dom_id(type) %>
+              <span class="checkmark"></span>
+              <%= label_tag dom_id(type), type.name, :class => "preferences-check-name" %>
+            </label>
+          <% end %>
+        </div>
+      </div>
 
-    <h2>Social topics</h2>
-    <div class="preferences-field">
-      <%= hidden_field_tag "user[charity_theme_ids][]", nil %>
-      <% @themes.each do |theme| %>
-        <label class="preferences-check-container">
-          <%= check_box_tag "user[charity_theme_ids][]", theme.id, @user.charity_theme_ids.include?(theme.id), id: dom_id(theme) %>
-          <span class="checkmark"></span>
-          <%= label_tag dom_id(theme), theme.name, :class => "preferences-check-name" %><br>
-        </label>
-      <% end %>
+      <div class="references-box">
+        <h3 class="pigeon-preferences-header">Social topics</h3>
+        <div class="preferences-field">
+          <%= hidden_field_tag "user[charity_theme_ids][]", nil %>
+          <% @themes.each do |theme| %>
+            <label class="preferences-check-container">
+              <%= check_box_tag "user[charity_theme_ids][]", theme.id, @user.charity_theme_ids.include?(theme.id), id: dom_id(theme) %>
+              <span class="checkmark"></span>
+              <%= label_tag dom_id(theme), theme.name, :class => "preferences-check-name" %><br>
+            </label>
+          <% end %>
+        </div>
+      </div>
     </div>
-
-    <div class="actions">
-      <%= f.submit %>
+    <div class="preferences-flex-center">
+      <div class="actions">
+        <%= f.submit "confirm", :class => "pigeon-button-blue pigeon-button-submit pigeon-button-width"  %>
+      </div>
     </div>
-
   <% end %>
-
 </div>
 
 
