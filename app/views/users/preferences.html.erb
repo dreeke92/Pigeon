@@ -6,7 +6,9 @@
       <h2 class="preferences-main-header">User preferences</h2>
 
       <div class="preferences-actions">
-        <div class="pigeon-button-gray pigeon-button-large pigeon-button-width">Skip</div>
+        <%= link_to posts_path do %>
+          <div class="pigeon-button-gray pigeon-button-large pigeon-button-width">Skip</div>
+        <% end %>
         <div class="actions">
           <%= f.submit "confirm", :class => "pigeon-button-blue pigeon-button-submit pigeon-button-width"  %>
         </div>

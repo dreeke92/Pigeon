@@ -16,7 +16,17 @@
       </div>
 
       <div class="navbar-avatar">
-        <img src="https://avatars0.githubusercontent.com/u/43139321?v=4" class="avatar">
+        <% unless current_user.nil? %>
+          <%= link_to user_path(current_user) do %>
+            <% if current_user.nil? %>
+              <%= image_tag 'http://www.travelcontinuously.com/wp-content/uploads/2018/04/empty-avatar.png',class: "avatar" %>
+            <% elsif current_user.photo.blank? %>
+              <%= image_tag 'http://www.travelcontinuously.com/wp-content/uploads/2018/04/empty-avatar.png',class: "avatar" %>
+            <% else %>
+              <%= cl_image_tag current_user.photo, crop: :fill, class: "avatar" %>
+            <% end %>
+          <% end %>
+        <% end %>
       </div>
 
       <div class="notification-menu navbar-wagon-item">
@@ -26,8 +36,16 @@
         <div class="dropdown">
           <i class="fas fa-bars navbar-item dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown"></i>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
+            <li>
+              <%= link_to posts_path do %>
+                <div>Dashboard</div>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to settings_users_path do %>
+                <div>Settings</div>
+              <% end %>
+            </li>
             <% if user_signed_in? %>
               <li>
                 <%= link_to destroy_user_session_path, method: :delete do %>

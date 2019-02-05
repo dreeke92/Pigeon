@@ -19,7 +19,9 @@
           <div>Change preferences</div>
         </div>
         <div class="settings-flex">
-          <div class="pigeon-button-blue pigeon-button-large pigeon-button-width"> Edit </div>
+          <%= link_to preferences_users_path do %>
+            <div class="pigeon-button-blue pigeon-button-large pigeon-button-width"> Edit </div>
+          <% end %>
         </div>
       </div>
     </div>
@@ -30,17 +32,23 @@
           <div>Follow NGOs and charities</div>
         </div>
         <div class="settings-flex">
-          <div class="pigeon-button-blue pigeon-button-large pigeon-button-width">Search</div>
+          <%= link_to charities_path do %>
+            <div class="pigeon-button-blue pigeon-button-large pigeon-button-width">Search</div>
+          <% end %>
         </div>
       </div>
       <div class="settings-units-container">
         <% @charities.each do |charity| %>
           <div class="settings-unit">
             <div class="settings-flex">
-              <%= cl_image_tag charity.photo, crop: :fill, class: "charity-avatar-xtra-small" %>
-              <div class="settings-unit-name">
-                <%= charity.name %>
-              </div>
+              <%= link_to charity_path(charity) do %>
+                <%= cl_image_tag charity.photo, crop: :fill, class: "charity-avatar-xtra-small" %>
+              <% end %>
+              <%= link_to charity_path(charity) do %>
+                <div class="settings-unit-name">
+                  <%= charity.name %>
+                </div>
+              <% end %>
             </div>
             <i class="fas fa-dove settings-unit-icon"></i>
           </div>
@@ -61,10 +69,14 @@
         <% @users.each do |user| %>
           <div class="settings-unit">
             <div class="settings-flex">
-              <%= cl_image_tag user.photo, crop: :fill, class: "charity-avatar-xtra-small" %>
-              <div class="settings-unit-name">
-                <%= user.first_name %> <%= user.last_name %>
-              </div>
+              <%= link_to user_path(user) do %>
+                <%= cl_image_tag user.photo, crop: :fill, class: "charity-avatar-xtra-small" %>
+              <% end %>
+              <%= link_to user_path(user) do %>
+                <div class="settings-unit-name">
+                  <%= user.first_name %> <%= user.last_name %>
+                </div>
+              <% end %>
             </div>
             <i class="fas fa-dove settings-unit-icon"></i>
           </div>

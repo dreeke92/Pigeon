@@ -40,7 +40,7 @@
   display: flex;
   position: relative;
   top: -35px;
-  height: 100px;
+  height: 120px;
 }
 
 @media (max-width: 750px) {
@@ -63,6 +63,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 120px;
+}
+
+@media (max-width: 750px){
+  .charity-profile-avatar{
+    height: 100%;
+  }
+}
+
+@media (max-width: 500px){
+  .charity-profile-avatar{
+    height: 100%;
+  }
 }
 
 .charity-profile-followers-display{
