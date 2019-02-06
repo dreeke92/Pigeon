@@ -27,7 +27,9 @@
           <div class="charity-profile-card">
             <div class="charity-profile-card-header">
               <div class="charity-profile-card-profile">
-                <%= cl_image_tag charity.photo, crop: :fill, class: "charity-avatar-small" %>
+                <%= link_to charity_path(charity) do %>
+                  <%= cl_image_tag charity.photo, crop: :fill, class: "charity-avatar-small" %>
+                <% end %>
                 <div class="charity-profile-card-title">
                   <h5 class="charity-profile-card-name"><%= charity.name %></h5>
                   <p class="charity-profile-card-category"><%= charity.category %></p>
@@ -45,7 +47,9 @@
             </div>
             <div class="charity-profile-card-action">
               <div class="pigeon-button-medium pigeon-button-blue">Donate</div>
-              <div class="pigeon-button-medium pigeon-button-gray">Profile</div>
+              <%= link_to charity_path(charity) do %>
+                <div class="pigeon-button-medium pigeon-button-gray">Profile</div>
+              <% end %>
             </div>
           </div>
         </div>

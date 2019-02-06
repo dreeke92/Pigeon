@@ -22,7 +22,9 @@
           <div class="charity-post-card-header">
             <div class="charity-post-card-profile">
               <div class="charity-post-card-profile-avatar">
-                <%= cl_image_tag post.charity.photo, crop: :fill, class: "charity-avatar-xtra-small" %>
+                <%= link_to charity_path(post.charity) do %>
+                  <%= cl_image_tag post.charity.photo, crop: :fill, class: "charity-avatar-xtra-small" %>
+                <% end %>
               </div>
               <div class="charity-post-card-title">
                 <p class="charity-post-card-name"><%= post.charity.name %></p>
@@ -44,7 +46,9 @@
               <p class="charity-post-card-like-number">1,500</p>
             </div>
             <div class="pigeon-button-medium pigeon-button-blue">Donate</div>
-            <div class="pigeon-button-medium pigeon-button-gray">Profile</div>
+            <%= link_to charity_path(post.charity) do %>
+              <div class="pigeon-button-medium pigeon-button-gray">Profile</div>
+            <% end %>
           </div>
         </div>
       </div>
