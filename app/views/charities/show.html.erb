@@ -1,44 +1,5 @@
-  <div class="pigeon-container-profile">
-    <div class="charity-profile-header">
-      <div class="charity-profile-profile">
-        <div class="charity-profile-avatar">
-          <%= cl_image_tag @charity.photo, crop: :fill, class: "charity-avatar-large" %>
-        </div>
-        <div class="charity-profile-title">
-          <p class="charity-profile-category invisible">invisible</p>
-          <h3 class="charity-profile-name"><%= @charity.name %></h3>
-          <p class="charity-profile-category"><%= @charity.category %></p>
-        </div>
-      </div>
-      <div class="charity-profile-followers-display">
-        <i class="fas fa-dove charity-profile-follower-item"></i>
-        <div class="charity-profile-followers">1,500</div>
-      </div>
-    </div>
-    <div class="charity-profile-action">
-      <div class="pigeon-button-large pigeon-button-blue" id="charity-profile-button-offset">Donate</div>
-      <div class="pigeon-button-large pigeon-button-gray" id="charity-profile-button-offset">Follow</div>
-    </div>
-    <div class="charity-tabs">
-      <a class="charity-tab active" id="charity-posts-tab" href="#">
-        <p>News</p>
-      </a>
-      <a class="charity-tab" id="charity-about-tab" href="#">
-        <p>About</p>
-      </a>
-      <a class="charity-tab" id="charity-contact-tab" href="#">
-        <p>Contact details</p>
-      </a>
-    </div>
-    <div class="charity-pages-container">
-      <div class="charity-page" id="charity-posts-page">
-        <%= render 'posts', charity: @charity %>
-      </div>
-      <div class="charity-page" id="charity-about-page" hidden>
-        <%= render 'about', charity: @charity %>
-      </div>
-      <div class="charity-page" id="charity-contact-page" hidden>
-        <%= render 'contact', charity: @charity %>
-      </div>
-    </div>
-  </div>
+<% if @charity.status == "requested" %>
+  <%= render 'requested', charity: @charity %>
+<% else %>
+  <%= render 'profile', charity: @charity %>
+<% end %>
