@@ -1,0 +1,52 @@
+.new-charity-container {
+  background-color: white;
+  padding: 10px;
+  margin: 10px auto 10px auto;
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.05);
+  border-radius: 10px;
+}
+
+.new-charity-button-large{
+  color: white;
+  border-radius: 20px;
+  // padding: 5px 15px;
+  // padding-bottom: 15px;
+  // padding-left: 15px;
+  margin: 8px;
+  text-align: center;
+  height: 40px;
+  // line-height: 40px;
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 750px){
+  .new-charity-button-large{
+    height: 30px;
+    // line-height: 30px;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 14px;
+    margin: 6px;
+  }
+}
+
+@media (max-width: 500px){
+  .new-charity-button-large{
+    height: 25px;
+    // line-height: 25px;
+    display: inline-block;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 12px;
+    margin: 4px;
+  }
+}
+
+.new-charity-center-text{
+  display: flex;
+  justify-content: center;
+}
+

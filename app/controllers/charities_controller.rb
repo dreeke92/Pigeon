@@ -7,7 +7,7 @@ class CharitiesController < ApplicationController
   def create
     @charity = Charity.new(charity_params)
     @charity.user = current_user
-    @charity.status = "Requested"
+    @charity.status = "requested"
     if @charity.save
       redirect_to charity_path(@charity)
     else
@@ -16,7 +16,7 @@ class CharitiesController < ApplicationController
   end
 
   def index
-    @charities = Charity.all
+    @charities = Charity.all.where(status: "confirmed")
   end
 
   def show
