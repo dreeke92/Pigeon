@@ -14,6 +14,10 @@ Like.destroy_all
 Post.destroy_all
 Rating.destroy_all
 Comment.destroy_all
+CharityThemePreference.destroy_all
+CharityTypePreference.destroy_all
+CharityThemeRelation.destroy_all
+CharityTypeRelation.destroy_all
 CharityTheme.destroy_all
 CharityType.destroy_all
 Charity.destroy_all
@@ -107,10 +111,12 @@ puts "Creating charities..."
 
 red_cross = Charity.new(name: "Red Cross", description: "The ICRC is an independent, neutral organization ensuring humanitarian protection and assistance for victims of armed conflict and other situations of violence. ", website_url: "https://www.icrc.org/en", phone_number: "+41 22 734 60 01", email: 'red@cross.com', geographical_reach: "International", category: "Humanitarian aid", status: 'Accepted', user_id: steven.id, internal_rating: 5)
 red_cross.remote_photo_url = photo_red_cross
+red_cross.status = "confirmed"
 red_cross.save!
 
 wwf = Charity.new(name: "WWF", description: "Our mission is to build a future in which people live in harmony with nature. From our experience as the world's leading independent conservation body, we know that the well-being of people, wildlife and the environment are closely linked. ", website_url: "https://www.wwf.org", phone_number: "0499 70 86 41", email: 'koen.stuyck@wwf.be', geographical_reach: "International", category: "Animal rights", status: 'Accepted', user_id: kenny.id, internal_rating: 4)
 wwf.remote_photo_url = photo_wwf
+wwf.status = "confirmed"
 wwf.long_description = "The World Wide Fund for Nature (WWF) is an international non-governmental organization founded in 1961, working in the field of the wilderness preservation, and the reduction of human impact on the environment.[4] It was formerly named the World Wildlife Fund, which remains its official name in Canada and the United States.[4]
 
 WWF is the world's largest conservation organization with over five million supporters worldwide, working in more than 100 countries, supporting around 1,300 conservation and environmental projects.[5] They have invested over $1 billion in more than 12,000 conservation initiatives since 1995.[6] WWF is a foundation with 55% of funding from individuals and bequests, 19% from government sources (such as the World Bank, DFID, USAID) and 8% from corporations in 2014.[7][8]
@@ -120,10 +126,12 @@ wwf.save!
 
 green_peace = Charity.new(name: "Grean Peace", description: "Imagine a world where forests flourish and oceans are full of life. Where energy is as clean as a mountain stream. Where everyone has security, dignity and joy. We can’t build this future alone, but we can build it together.", website_url: "https://www.greenpeace.org/international/", phone_number: "+32 2 274 0200", email: 'info.be@greenpeace.org', geographical_reach: "International", category: "Animal rights", status: 'Accepted', user_id: dree.id, internal_rating: 4)
 green_peace.remote_photo_url = photo_green_peace
+green_peace.status = "confirmed"
 green_peace.save!
 
 oxfam = Charity.new(name: "Oxfam", description: "While the richest continue to enjoy booming fortunes, nearly half of the world's population is living on less than $5.50 a day. Inequality is keeping people trapped in poverty. Let’s step up the fight against it and beat poverty for good. Join us now.", website_url: "https://www.oxfam.org//", phone_number: "+254 722 20041", email: 'oxfamsol@oxfamsol.be', geographical_reach: "International", category: "Inequality", status: 'Accepted', user_id: frederik.id, internal_rating: 4)
 oxfam.remote_photo_url = photo_oxfam
+oxfam.status = "confirmed"
 oxfam.save!
 
 puts "Creating charity themes..."

@@ -16,7 +16,7 @@ class CharitiesController < ApplicationController
   end
 
   def index
-    @charities = Charity.all
+    @charities = Charity.all.where(status: "confirmed")
   end
 
   def show
