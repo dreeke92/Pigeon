@@ -16,8 +16,9 @@
     </div>
   </div>
   <div class="charity-profile-action">
-    <div class="pigeon-button-large pigeon-button-blue" id="charity-profile-button-offset">Donate</div>
-    <div class="pigeon-button-large pigeon-button-gray" id="charity-profile-button-offset">Follow</div>
+    <% unless @user == current_user  %>
+      <div class="pigeon-button-large pigeon-button-gray" id="charity-profile-button-offset">Follow</div>
+    <% end %>
   </div>
   <div class="charity-tabs">
     <a class="charity-tab active" id="charity-posts-tab" href="#">

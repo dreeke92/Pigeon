@@ -9,7 +9,10 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :charities
+  resources :charities do
+    resources :posts, only: [:new, :create]
+  end
+
   resources :comments, only: [ :create, :update, :destroy]
   resources :donations, only: [ :create]
   resources :follows, only: [ :create, :update]

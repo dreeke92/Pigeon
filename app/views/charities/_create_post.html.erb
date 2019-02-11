@@ -1,0 +1,24 @@
+<div class="grid-item">
+  <div class="charity-post-card" style="">
+    <div class="charity-post-card-header">
+      <div class="charity-post-card-profile">
+        <div class="charity-post-card-profile-avatar">
+          <%= cl_image_tag charity.photo, crop: :fill, class: "charity-avatar-xtra-small" %>
+        </div>
+        <div class="charity-post-card-title">
+          <p class="charity-post-card-name"><%= charity.name %></p>
+          <p class="charity-post-card-category"><%= charity.category %></p>
+        </div>
+      </div>
+    </div>
+<!--     <div class="charity-post-card-picture">
+      <p>This is a picture</p>
+    </div> -->
+    <div>
+      <%= simple_form_for([@charity, @post]) do |f| %>
+        <%= f.input :content, label: false, placeholder: "Create a post" %>
+        <%= f.submit "Create post", class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
