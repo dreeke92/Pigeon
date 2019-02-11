@@ -1,5 +1,6 @@
 <div class="grid">
   <!-- <div class="grid-sizer"></div> -->
+  <%= render 'create_post', charity: @charity, post: @post %>
   <% @posts.each do |post| %>
     <div class="grid-item">
       <div class="charity-post-card" style="">

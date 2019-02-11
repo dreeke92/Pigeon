@@ -1,5 +1,5 @@
 <% if @charity.status == "requested" %>
   <%= render 'requested', charity: @charity %>
 <% else %>
-  <%= render 'profile', charity: @charity %>
+  <%= render 'profile', charity: @charity, post: @post %>
 <% end %>
