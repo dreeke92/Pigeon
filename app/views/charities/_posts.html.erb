@@ -18,9 +18,15 @@
               <p><%= post.created_at.to_date %></p>
           </div>
         </div>
-        <div class="charity-post-card-picture">
-          <p>This is a picture</p>
-        </div>
+        <% if post.photo.nil? %>
+          <div class="charity-post-card-picture">
+            <p>This is a picture</p>
+          </div>
+        <% else %>
+          <div>
+            <%= cl_image_tag post.photo, crop: :fill %>
+          </div>
+        <% end %>
         <div class="charity-post-card-description"><%= post.content %>
         </div>
         <div class="charity-post-card-action">
