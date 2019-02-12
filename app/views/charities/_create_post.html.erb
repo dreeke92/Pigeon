@@ -11,22 +11,21 @@
         </div>
       </div>
     </div>
-<!--     <div class="charity-post-card-picture">
-      <p>This is a picture</p>
-    </div> -->
-    <div>
+    <%= render 'post_preview', charity: @charity, post: @post %>
+    <div id="new_post">
+      <%= form_for ([@charity, @post]) do |f| %>
+        <%= f.label :photo, 'Upload picture:' %>
+        <%= f.file_field :photo, name: "post[photo]" %>
+        <%= f.submit "create post" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
 <!--       <%= simple_form_for([@charity, @post]) do |f| %>
         <%= f.input :content, label: false, placeholder: "Create a post" %>
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
         <%= f.submit "Create post", class: 'btn btn-primary' %>
       <% end %> -->
-      <%= form_for([@charity, @post]) do |f| %>
-        <%= f.text_area :content %>
-        <%= f.text_field :image_url %>
-        <%= f.text_field :video_url %>
-        <%= f.submit :post %>
-      <% end %>
-    </div>
-  </div>
-</div>

@@ -23,8 +23,10 @@ gem 'simple_form'
 gem 'carrierwave', '~> 1.2'
 gem 'masonry-rails', '~> 0.2.4'
 gem 'coffee-script-source', '~> 1.11', '>= 1.11.1'
+gem 'coffee-rails'
 gem 'sprockets', '>= 3.0.0'
 gem 'omniauth-facebook'
+gem 'jquery-fileupload-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
