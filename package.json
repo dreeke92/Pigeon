@@ -6,6 +6,7 @@
     "bootstrap": "^3.4.0",
     "infinite-scroll": "^3.0.5",
     "jquery": "^3.3.1",
+    "jquery-bridget": "^2.0.1",
     "masonry-layout": "^4.2.2"
   },
   "devDependencies": {
