@@ -15,7 +15,7 @@
     <div id="new_post">
       <%= form_for ([@charity, @post]) do |f| %>
         <%= f.label :photo, 'Upload picture:' %>
-        <%= f.file_field :photo, name: "post[photo]" %>
+        <%= f.file_field :photo, name: "post[photo]", class: "js-image-uploader" %>
         <%= f.submit "create post" %>
       <% end %>
     </div>
